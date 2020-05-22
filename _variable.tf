@@ -35,7 +35,7 @@ variable "private_netnum_offset" {
 }
 
 variable "multi_nat" {
-  default     = true
+  default     = false
   description = "Number of NAT Instances, 'true' will yield one per AZ while 'false' creates one NAT"
 
 }
