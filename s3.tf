@@ -3,6 +3,10 @@ resource "aws_s3_bucket" "default" {
   region = "ap-south-1"
   acl    = "private"
 
+  versioning {
+    enabled = true
+  }
+
   tags = merge(
     var.tags,
     {
