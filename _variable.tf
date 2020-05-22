@@ -1,5 +1,5 @@
 variable "vpc_cidr" {
-  default     = "10.0.0.0/16" #example CIDR
+  default     = "10.45.0.0/16" #example CIDR
   description = "Network CIDR for the VPC"
 }
 
@@ -35,7 +35,7 @@ variable "private_netnum_offset" {
 }
 
 variable "multi_nat" {
-  default     = false
+  default     = true
   description = "Number of NAT Instances, 'true' will yield one per AZ while 'false' creates one NAT"
 
 }

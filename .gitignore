@@ -3,3 +3,4 @@
 .terraform
 .terraform-plan*
 .tfstate*
+.gitignore
