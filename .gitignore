@@ -4,3 +4,4 @@
 .terraform-plan*
 .tfstate*
 .gitignore
+provider.tf
