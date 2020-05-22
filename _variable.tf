@@ -1,5 +1,5 @@
 variable "vpc_cidr" {
-  default     = "10.0.0.0/16" #example CIDR
+  default     = "10.45.0.0/16" #example CIDR
   description = "Network CIDR for the VPC"
 }
 
