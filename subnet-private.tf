@@ -60,5 +60,3 @@ resource aws_route_table_association "private" {
     create_before_destroy = true
   }
 }
-
-
