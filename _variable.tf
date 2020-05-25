@@ -4,7 +4,7 @@ variable "vpc_cidr" {
 }
 
 variable "name" {
-  default     = "labs"
+  default     = ""
   description = "Name prefix for the resources of this stack"
 }
 

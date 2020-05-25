@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "default" {
-  bucket = "mumbai-terraform-backend"
+/* resource "aws_s3_bucket" "default" {
+  bucket = var.bucket_name
   region = "ap-south-1"
   acl    = "private"
 
@@ -16,3 +16,4 @@ resource "aws_s3_bucket" "default" {
     }
   )
 }
+ */
