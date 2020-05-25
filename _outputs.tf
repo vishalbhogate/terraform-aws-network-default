@@ -1,10 +1,10 @@
 output "vpc_id" {
-  value = aws_vpc.default.id
+  value       = aws_vpc.default.id
   description = "ID for VPC created"
 }
 
-output "vpc_id" {
-  value = aws_vpc.default.cidr_block
+output "vpc_cidr" {
+  value       = aws_vpc.default.cidr_block
   description = "CIDR for VPC created"
 }
 

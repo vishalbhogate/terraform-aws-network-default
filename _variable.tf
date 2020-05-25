@@ -8,7 +8,6 @@ variable "name" {
   description = "Name prefix for the resources of this stack"
 }
 
-
 variable "tags" {
   type        = map(string)
   default     = {}
