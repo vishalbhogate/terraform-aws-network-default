@@ -25,7 +25,7 @@ resource aws_route_table "secure" {
   tags = merge(
     var.tags,
     {
-      "Name"    = "${var.name}-rtb-secure"
+      "Name"    = "${var.name}-RouteTable-secure"
       "Scheme"  = "secure"
       "EnvName" = var.name
     }

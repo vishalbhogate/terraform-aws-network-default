@@ -24,7 +24,7 @@ resource aws_route_table "public" {
   tags = merge(
     var.tags,
     {
-      "Name"    = "${var.name}-rtb-public"
+      "Name"    = "${var.name}-RouteTable-public"
       "EnvName" = var.name
     }
   )
