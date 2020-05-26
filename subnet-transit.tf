@@ -26,7 +26,7 @@ resource aws_route_table "transit" {
   tags = merge(
     var.tags,
     {
-      "Name"    = "${var.name}-rtb-transit"
+      "Name"    = "${var.name}-RouteTable-transit"
       "Scheme"  = "transit"
       "EnvName" = var.name
     },
