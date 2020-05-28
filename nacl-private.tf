@@ -20,7 +20,7 @@ resource aws_network_acl "private" {
 # EGRESS
 ###########
 
-## Can we whitelist only public and secure subnet?
+#Instance in the private subnet sends a packet to the internet, it leaves with the internet address in the header's destination
 
 resource aws_network_acl_rule "out_private_to_world" {
   network_acl_id = aws_network_acl.private.id
@@ -37,43 +37,11 @@ resource aws_network_acl_rule "out_private_to_world" {
   }
 }
 
-## Can we whitelist only public and secure subnet?
-
-/* resource aws_network_acl_rule "out_private_to_public_subnet" {
-  network_acl_id = aws_network_acl.private.id
-  egress         = true
-  rule_number    = "1"
-  rule_action    = "allow"
-  cidr_block     = "0.0.0.0/0"
-  protocol       = -1
-  to_port        = 0
-  from_port      = 0
-
-  lifecycle {
-    create_before_destroy = true
-  }
-}
-
-resource aws_network_acl_rule "out_private_to_secure_subnet" {
-  network_acl_id = aws_network_acl.private.id
-  egress         = true
-  rule_number    = "100"
-  rule_action    = "allow"
-  cidr_block     = "0.0.0.0/0"
-  protocol       = -1
-  to_port        = 0
-  from_port      = 0
-
-  lifecycle {
-    create_before_destroy = true
-  }
-} */
-
-
 ###########
 # INGRESS
 ###########
 
+#Instance in the private subnet sends a packet to the internet, it leaves with the internet address in the header's destination
 resource aws_network_acl_rule "in_private_from_world_tcp" {
   network_acl_id = aws_network_acl.private.id
   egress         = false
