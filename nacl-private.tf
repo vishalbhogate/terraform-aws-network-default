@@ -5,8 +5,8 @@ resource aws_network_acl "private" {
   tags = merge(
     var.tags,
     {
-      "Name"    = "${var.name}-Private-ACL"
-      "Scheme"  = "Private"
+      "Name"    = "${var.name}-ACL-Private"
+      "Scheme"  = "private"
       "EnvName" = var.name
     }
   )
