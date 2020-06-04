@@ -13,7 +13,7 @@ resource aws_subnet "secure" {
     var.tags,
     {
       "Name"    = "${var.name}-Subnet-Secure-${upper(data.aws_availability_zone.az[count.index].name_suffix)}"
-      "Scheme"  = "Secure"
+      "Scheme"  = "secure"
       "EnvName" = var.name
     }
   )
