@@ -5,9 +5,9 @@ resource aws_network_acl "public" {
   tags = merge(
     var.tags,
     {
-      "Name"    = "${var.name}-Public-ACL"
+      "Name"    = "${var.name}-ACL-Public"
       "EnvName" = var.name
-      "Scheme"  = "secure"
+      "Scheme"  = "public"
     }
   )
 
