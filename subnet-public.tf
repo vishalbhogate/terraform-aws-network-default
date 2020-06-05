@@ -25,6 +25,7 @@ resource aws_route_table "public" {
     var.tags,
     {
       "Name"    = "${var.name}-RouteTable-public"
+      "Scheme"  = "public"
       "EnvName" = var.name
     }
   )

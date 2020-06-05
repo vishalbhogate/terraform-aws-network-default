@@ -1,5 +1,5 @@
 resource aws_subnet transit {
-  count  = var.transit_subnet ? lenght(data.aws_availability_zones.available.names) > var.max_az ? var.max_az : lenght(data.aws_availability_zones.available.names) : 0
+  count  = var.transit_subnet ? length(data.aws_availability_zones.available.names) > var.max_az ? var.max_az : length(data.aws_availability_zones.available.names) : 0
   vpc_id = aws_vpc.default.id
   cidr_block = cidrsubnet(
     aws_vpc.default.cidr_block,
@@ -50,7 +50,7 @@ resource aws_route "transit_internet_route" {
 }
 
 resource aws_route_table_association "transit" {
-  count          = var.transit_subnet ? lenght(data.aws_availability_zones.available.names) > var.max_az ? var.max_az : lenght(data.aws_availability_zones.available.names) : 0
+  count          = var.transit_subnet ? length(data.aws_availability_zones.available.names) > var.max_az ? var.max_az : length(data.aws_availability_zones.available.names) : 0
   subnet_id      = aws_subnet.transit[count.index].id
   route_table_id = aws_route_table.transit[0].id
 
