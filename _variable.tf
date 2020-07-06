@@ -1,10 +1,8 @@
 variable "vpc_cidr" {
-  default     = "" #example CIDR
   description = "Network CIDR for the VPC"
 }
 
 variable "name" {
-  default     = ""
   description = "Name prefix for the resources of this stack"
 }
 
